@@ -20,13 +20,13 @@ public class AzureAssignmentApplication {
 		System.out.println("hello im here");
 	}
 
-	@CrossOrigin(origins = "http://localhost:3000/")
+	@CrossOrigin(origins = "https://lively-dune-0574f2610.4.azurestaticapps.net/")
 	@PostMapping("/addProduct")
 	public Product addProduct(@RequestBody  Product product){
 		return  productInterface.save(product);
 	}
 
-	@CrossOrigin(origins = "http://localhost:3000/")
+	@CrossOrigin(origins = "https://lively-dune-0574f2610.4.azurestaticapps.net/")
 	@GetMapping ("/getAllProducts")
 	List<Product> getAllProducts(){
 		return productInterface.findAll();
